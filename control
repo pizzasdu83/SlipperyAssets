@@ -1,0 +1,8 @@
+Package: com.pizzasdu83.slipperyassets
+Name: Slippery Assets
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Shared icons (GitHub, Discord, More) used by the Slippery tweaks
+Maintainer: SaaS
+Author: SaaS
+Section: Utilities
