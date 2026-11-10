@@ -12,7 +12,10 @@ env:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
 
     strategy:
       matrix:
@@ -62,7 +65,10 @@ jobs:
   release:
     if: github.event_name == 'push' && github.ref == 'refs/heads/release'
     needs: build
-    runs-on: macos-14
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
 
     steps:
     - name: Checkout repository
